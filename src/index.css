@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;700&display=swap');
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Instrument Sans', sans-serif;
+  @apply antialiased;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-wave {
+  animation: wave-animation 10s linear infinite;
+}
+
+@keyframes wave-animation-reverse {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-wave-reverse {
+  animation: wave-animation-reverse 10s linear infinite;
+}
+
+/* lapisan gelombang kedua dengan kecepatan berbeda */
+@keyframes wave-animation-slow {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-wave-slow {
+  animation: wave-animation-slow 15s linear infinite;
+  /* Gelombang kedua lebih lambat */
+}
+
+/* --- Animasi Mengambang di Air --- */
+@keyframes float-on-water {
+
+  0%,
+  100% {
+    transform: translateY(0);
+    /* Posisi normal */
+  }
+
+  50% {
+    transform: translateY(-20px);
+    /* Bergerak ke atas 20px - Ditingkatkan */
+  }
+}
+
+.animate-float {
+  animation: float-on-water 8s ease-in-out infinite;
+  /* Durasi bisa disesuaikan, misal 6s atau 10s */
+}
