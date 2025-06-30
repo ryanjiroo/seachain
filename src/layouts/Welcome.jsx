@@ -1,99 +1,83 @@
+// layouts/Welcome.jsx
 import React from 'react';
-import BottleBackground from '../assets/Bottle.png';
-import SeachainLogo from '../assets/seachain.png';
+import Bottleblur from '../assets/Bottleblur.png';
 
 const Welcome = () => {
     return (
-        <>
-            <style jsx>{`
-        @keyframes fadeInSlideUp {
-          0% {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          100% {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        .animate-welcome-element {
-          animation: fadeInSlideUp 0.8s ease-out forwards; /* Durasi lebih cepat */
-          opacity: 0; /* Pastikan elemen tersembunyi sebelum animasi */
-        }
-
-        /* Penundaan untuk setiap elemen */
-        .animate-welcome-logo {
-          animation-delay: 0.2s; /* Logo muncul lebih awal */
-        }
-        .animate-welcome-denpasar {
-          animation-delay: 0.4s;
-        }
-        .animate-welcome-heading {
-          animation-delay: 0.6s;
-        }
-        .animate-welcome-subheading {
-          animation-delay: 0.8s;
-        }
-        .animate-welcome-button {
-          animation-delay: 1.0s;
-        }
-      `}</style>
-            <div
-                className="relative flex flex-col min-h-screen w-screen text-white text-center overflow-hidden"
-                style={{
-                    backgroundImage: `url(${BottleBackground})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat',
-                }}
-            >
-                {/* Gradient Overlay */}
-                <div
-                    className="absolute inset-0 bg-gradient-to-b from-transparent via-[#03292F]/80 to-[#088395] z-10"
-                ></div>
-
-                {/* Kontainer Konten Utama*/}
-                <div className="relative z-20 flex flex-col w-full h-full px-6 py-6 md:px-10 md:py-10 lg:px-14 lg:py-14 flex-grow">
-
-                    {/* Header dengan Logo dan Teks Denpasar */}
-                    <header className="w-full flex justify-between items-center pb-8 md:pb-12">
-                        <div className="animate-welcome-element animate-welcome-logo"> {/* <-- Animasi Logo */}
-                            <img
-                                src={SeachainLogo}
-                                alt="Seachain Logo"
-                                className="h-10 md:h-12 object-contain ml-0 lg:ml-36"
+        <div className="relative w-screen min-h-[120vh] bg-[#EBF4F6] overflow-hidden">
+            <img
+                src={Bottleblur}
+                alt="Bottle Blur Background"
+                className="absolute inset-0 w-full h-full object-cover z-0"
+                style={{ transform: 'translateY(-15%)' }}
+            />
+            <div className="relative inset-0 bg-black z-0"></div>
+            <div className="relative z-10 p-8 md:p-12 lg:p-16 text-white">
+                <div className="max-w-screen text-left mt-52 mb-64">
+                    <h1 className="font-['Instrument Sans'] text-[90px] font-extrabold italic leading-tight mb-6 text-white">
+                        Smarter Recycling, <br />Stronger Blue Economy
+                    </h1>
+                    <p className="font-['Poppins'] text-[30px] leading-relaxed mb-10 text-white">
+                        Powered by <strong className="font-bold">Containder</strong>, <strong className="font-bold">Smash.id</strong> and <strong className="font-bold">Popsea</strong> to build a transparent, <br />data driven PET recycling ecosystem in Bali.
+                    </p>
+                    <button className="flex items-center justify-center px-8 py-3 bg-[#EBF4F6] text-[#37B7C3] font-['Poppins'] font-semibold rounded-full shadow-lg hover:bg-[#EBF4F6] transition-colors duration-300">
+                        Learn More
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-5 w-5 ml-2"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                        >
+                            <path
+                                fillRule="evenodd"
+                                d="M10.293 15.707a1 1 0 010-1.414L14.586 10l-4.293-4.293a1 1 0 111.414-1.414l5 5a1 0 010 1.414l-5 5a1 0 01-1.414 0z"
+                                clipRule="evenodd"
                             />
-                        </div>
-                        <div className="font-['Instrument_Sans'] text-base md:text-xl lg:text-3xl font-bold text-[#EBF4F6] mr-0 lg:mr-36 animate-welcome-element animate-welcome-denpasar"> {/* <-- Animasi Denpasar */}
-                            Denpasar
-                        </div>
-                    </header>
-
-                    {/* Main Content (Judul, Sub-judul, dan Tombol) */}
-                    <main className="flex flex-col justify-center items-center flex-grow px-4 text-center">
-                        <h1
-                            className="font-['Instrument_Sans'] text-[#EBF4F6] font-bold text-3xl md:text-5xl lg:text-6xl leading-tight mb-4 md:mb-6 lg:mb-8 drop-shadow-lg animate-welcome-element animate-welcome-heading" // <-- Animasi Judul
-                        >
-                            Track Every Bottle, <br />
-                            Grow The Blue Economy
-                        </h1>
-                        <p
-                            className="font-['Instrument_Sans'] text-sm md:text-lg lg:text-xl max-w-xl md:max-w-2xl leading-relaxed drop-shadow-md opacity-90 mb-8 md:mb-10 animate-welcome-element animate-welcome-subheading" // <-- Animasi Sub-judul
-                        >
-                            SEACHAIN has successfully piloted in Bali and is ready to grow plastic removal efforts worldwide
-                        </p>
-
-                        {/* Tombol "Save Ocean" */}
-                        <button
-                            className="bg-white text-[#088395] font-['Instrument_Sans'] font-bold py-3 px-8 md:py-4 md:px-10 rounded-full shadow-md hover:bg-gray-100 transition-colors duration-300 animate-welcome-element animate-welcome-button" // <-- Animasi Tombol
-                        >
-                            Save Ocean
-                        </button>
-                    </main>
+                            <path
+                                fillRule="evenodd"
+                                d="M4.293 15.707a1 1 0 010-1.414L8.586 10 4.293 5.707a1 0 011.414-1.414l5 5a1 0 010 1.414l-5 5a1 0 01-1.414 0z"
+                                clipRule="evenodd"
+                            />
+                        </svg>
+                    </button>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 max-w-7xl mx-auto pt-10 pb-20">
+                    <InfoBox
+                        value="45.560"
+                        description="Tons Unmanaged Plastic Waste / Year"
+                    />
+                    <InfoBox
+                        value="12%"
+                        description="Waste Traceability Percentage"
+                    />
+                    <InfoBox
+                        value="71"
+                        description="Total Number of Waste Banks"
+                    />
+                    <InfoBox
+                        value="18"
+                        description="Active Waste Banks"
+                    />
+                    <InfoBox
+                        value="53"
+                        description="Inactive Waste Banks"
+                    />
                 </div>
             </div>
-        </>
+        </div>
+    );
+};
+
+const InfoBox = ({ value, description }) => {
+    return (
+        <div className="bg-[#EBF4F6] bg-opacity-30 backdrop-filter backdrop-blur-lg rounded-[5px] p-6 text-center border shadow-lg h-[185px]" style={{ boxShadow: '4px 4px 8px rgba(0, 0, 0, 0.2)' }}>
+            <h3 className="font-['Instrument Sans'] text-4xl md:text-5xl font-bold text-[#071952] mb-2">
+                {value}
+            </h3>
+            <p className="font-['Poppins'] text-base md:text-lg opacity-90 text-[#088395]">
+                {description}
+            </p>
+        </div>
     );
 };
 
