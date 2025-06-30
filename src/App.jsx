@@ -2,7 +2,7 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom'; // Import BrowserRouter
 import Welcome from './layouts/Welcome';
-import About from './layouts/About'; 
+import Collaboration from './layouts/Collaboration'; 
 import Solution from './layouts/Solution';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -14,7 +14,7 @@ function App() {
       <div className="App">
         <Navbar />
         <Welcome />
-        <About /> {/* Use the renamed component */}
+        <Collaboration /> {/* Use the renamed component */}
         <Solution/>
         <Impact />
         <Footer/>
