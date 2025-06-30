@@ -18,8 +18,8 @@ function Footer() {
             <h3 className="text-lg md:text-xl font-['Poppins'] font-semibold mb-3 md:mb-4">About</h3>
             <ul>
               <li className="mb-1 md:mb-2"><a href="https://www.preventedoceanplastic.com/category/pop-south-east-asia/" className="font-['Poppins'] text-sm md:text-base hover:underline">POPSEA</a></li>
-              <li className="mb-1 md:mb-2"><a href="https://containder.com/home" className="font-['Poppins'] text-sm md:text-base hover:underline">Smash.id</a></li>
-              <li className="mb-1 md:mb-2"><a href="https://www.smash.id/" className="font-['Poppins'] text-sm md:text-base hover:underline">Container</a></li>
+              <li className="mb-1 md:mb-2"><a href="https://www.smash.id/" className="font-['Poppins'] text-sm md:text-base hover:underline">Smash.id</a></li>
+              <li className="mb-1 md:mb-2"><a href="https://containder.com/home" className="font-['Poppins'] text-sm md:text-base hover:underline">Container</a></li>
             </ul>
           </div>
 
